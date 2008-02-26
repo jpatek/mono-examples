@@ -1,0 +1,28 @@
+<Combine name="chapter_02" fileversion="2.0">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry build="True" name="example_01-in_c" configuration="Debug" />
+      <Entry build="True" name="example_01-in_cs" configuration="Debug" />
+      <Entry build="True" name="example_01-xtra_1-in_c" configuration="Debug" />
+      <Entry build="True" name="example_01-xtra_1-in_cs" configuration="Debug" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry build="True" name="example_01-in_c" configuration="Release" />
+      <Entry build="True" name="example_01-in_cs" configuration="Release" />
+      <Entry build="True" name="example_01-xtra_1-in_c" configuration="Release" />
+      <Entry build="True" name="example_01-xtra_1-in_cs" configuration="Release" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="example_01-xtra_1-in_cs" single="True">
+    <Execute type="None" entry="example_01-in_c" />
+    <Execute type="None" entry="example_01-in_cs" />
+    <Execute type="None" entry="example_01-xtra_1-in_c" />
+    <Execute type="None" entry="example_01-xtra_1-in_cs" />
+  </StartMode>
+  <Entries>
+    <Entry filename="example_01-in_c/example_01-in_c.mdp" />
+    <Entry filename="example_01-in_cs/example_01-in_cs.mdp" />
+    <Entry filename="example_01-xtra_1-in_c/example_01-xtra_1-in_c.mdp" />
+    <Entry filename="example_01-xtra_1-in_cs/example_01-xtra_1-in_cs.mdp" />
+  </Entries>
+</Combine>

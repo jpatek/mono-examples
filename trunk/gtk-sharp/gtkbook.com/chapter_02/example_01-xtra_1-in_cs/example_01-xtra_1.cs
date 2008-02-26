@@ -27,9 +27,9 @@
 using System;
 using Gtk;
 
-namespace example_01
+namespace example_01_xtra_1
 {	
-	public class example_01
+	public class example_01_xtra_1
 	{		
 		public static void Main(string[] args) 
 		{			

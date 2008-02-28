@@ -1,3 +1,8 @@
+2008-02-28  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
+	* example_02.c: * Made the default window width 400 so that the window title
+	  is clear to see
+
 2008-02-27  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
 
 	* example_02-in_c.mdp, example_02.c: * Added example 2

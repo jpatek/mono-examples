@@ -43,7 +43,7 @@ int main (int argc,
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), "C02_E02 - in_c - Hello World!");
   gtk_container_set_border_width (GTK_CONTAINER (window), 10);
-  gtk_widget_set_size_request (window, 200, 100);
+  gtk_widget_set_size_request (window, 400, 100);
 
   /* Connect the main window to the destroy and delete-event signals. */
   g_signal_connect (G_OBJECT (window), "destroy",

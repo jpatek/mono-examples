@@ -51,7 +51,7 @@ namespace example_01
 			win = new Window(WindowType.Toplevel);
 			win.Title = "C02_E02 - in_cs - Hello World";
 			win.BorderWidth = 10;
-			win.SetSizeRequest(200,100);
+			win.SetSizeRequest(400,100);
 			
 			/* Connect the main window to the destroy and delete-event signals. */
 			// when this window is deleted, it'll run delete_event()

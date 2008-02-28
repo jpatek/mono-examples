@@ -37,7 +37,7 @@ namespace example_01_xtra_1
 			
 			/* Initialize GTK+ and all of its supporting libraries. */
 			//Application.Init();
-			if (Application.InitCheck("c02_e01b",ref args))			
+			if (Application.InitCheck("c02_e01_x1",ref args))			
 			{
 				Console.WriteLine("In GUI");
 			}

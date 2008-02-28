@@ -24,24 +24,32 @@
 //
 //--------------------------------------------------------------------------------
 
-
 using System;
 using Gtk;
 
-namespace example_01
+namespace example_01_xtra_1
 {	
-	public class example_01
+	public class example_01_xtra_1
 	{		
-		public static void Main(string[] args)
+		public static void Main(string[] args) 
 		{	
 			Window win;
 			
 			/* Initialize GTK+ and all of its supporting libraries. */
-			Application.Init();
-			
+			//Application.Init();
+			if (Application.InitCheck("c02_e01b",ref args))			
+			{
+				Console.WriteLine("In GUI");
+			}
+			else
+			{
+				Console.WriteLine("In Console");
+				return;
+			}
+					
 			/* Create a new window, give it a title and display it to the user. */
-			win = new Window(WindowType.Toplevel);
-			win.Title = "C02_E01 - in_cs - Hello World";
+			win = new Window(WindowType.Popup);
+			win.Title = "C02_E01-xtra_1 - in_cs - Hello World";
 			win.Show();
 			
 			/* Hand control over to the main loop. */

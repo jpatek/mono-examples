@@ -1,6 +1,6 @@
 //--------------------------------------------------------------------------------
 //
-// Copyright (C) 2008 Thomas Wiest (tw-mono_examples_project@wiestfamily.org)
+// Copyright (C) 2007 Andrew Krause
 //
 // This program is free software; you can redistribute it and/or modify it under
 // the terms of the GNU General Public License as published by the Free Software
@@ -16,56 +16,34 @@
 //
 //--------------------------------------------------------------------------------
 //
-// Converted from the examples in the book:
+// Examples from the book:
 //   Foundations of GTK+ Development
 //
 // Downloaded from:
 //   http://gtkbook.com/
 //
+// Modifications by:
+//   Thomas Wiest (tw-mono_examples_project@wiestfamily.org)//
 //--------------------------------------------------------------------------------
 
 
-using System;
-using Gtk;
 
-namespace example_01
-{	
-	public class example_01
-	{		
-		public static void Main(string[] args)
-		{	
-			Window win;
-			
-			/* Initialize GTK+ and all of its supporting libraries. */
-			Application.Init();
-			
-			/* Create a new window, give it a title and display it to the user. */
-			win = new Window(WindowType.Toplevel);
-			win.Title = "C02_E01 - in_cs - Hello World";
-			win.Show();
-			
-			/* Hand control over to the main loop. */
-			Application.Run();
-		}
-	}
+#include <gtk/gtk.h>
+
+int main (int argc,
+          char *argv[])
+{
+  GtkWidget *window;
+
+  /* Initialize GTK+ and all of its supporting libraries. */
+  gtk_init (&argc, &argv);
+
+  /* Create a new window, give it a title and display it to the user. */
+  window = gtk_window_new (GTK_WINDOW_POPUP);
+  gtk_window_set_title (GTK_WINDOW (window), "C02_E01-xtra_2 - in_c - Hello World");
+  gtk_widget_show (window);
+
+  /* Hand control over to the main loop. */
+  gtk_main ();
+  return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

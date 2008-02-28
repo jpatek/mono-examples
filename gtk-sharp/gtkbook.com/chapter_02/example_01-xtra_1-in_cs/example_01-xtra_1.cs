@@ -1,6 +1,6 @@
 //--------------------------------------------------------------------------------
 //
-// Copyright (C) 2008 Thomas Wiest
+// Copyright (C) 2008 Thomas Wiest (tw-mono_examples_project@wiestfamily.org)
 //
 // This program is free software; you can redistribute it and/or modify it under
 // the terms of the GNU General Public License as published by the Free Software
@@ -32,7 +32,10 @@ namespace example_01_xtra_1
 	public class example_01_xtra_1
 	{		
 		public static void Main(string[] args) 
-		{			
+		{	
+			Window win;
+			
+			/* Initialize GTK+ and all of its supporting libraries. */
 			//Application.Init();
 			if (Application.InitCheck("c02_e01b",ref args))			
 			{
@@ -44,9 +47,12 @@ namespace example_01_xtra_1
 				return;
 			}
 					
-			Window win = new Window(WindowType.Toplevel);
+			/* Create a new window, give it a title and display it to the user. */
+			win = new Window(WindowType.Toplevel);
 			win.Title = "C02_E01-xtra_1 - in_cs - Hello World";
 			win.Show();
+			
+			/* Hand control over to the main loop. */
 			Application.Run();
 		}
 	}

@@ -1,0 +1,5 @@
+2008-02-27  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
+	* example_01-xtra_2.cs: * Removed the InitCheck to make the example more
+	  clear
+

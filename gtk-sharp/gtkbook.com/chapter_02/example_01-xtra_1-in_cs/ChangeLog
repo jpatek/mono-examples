@@ -1,0 +1,5 @@
+2008-02-27  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
+	* example_01-xtra_1.cs: * Changed the description string for the InitCheck
+	  to include the xtra number
+

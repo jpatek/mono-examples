@@ -23,7 +23,7 @@
 //   http://gtkbook.com/
 //
 // Modifications by:
-//   Thomas Wiest//
+//   Thomas Wiest (tw-mono_examples_project@wiestfamily.org)//
 //--------------------------------------------------------------------------------
 
 

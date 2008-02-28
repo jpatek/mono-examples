@@ -1,4 +1,4 @@
-<Project name="example_01-xtra_1-in_c" fileversion="2.0" language="C" ctype="CProject">
+<Project name="example_01-xtra_2-in_c" fileversion="2.0" language="C" ctype="CProject">
   <Configurations active="Debug">
     <Configuration name="Debug" SourceDirectory="." ctype="CProjectConfiguration">
       <Output directory="bin/Debug" output="example_01b--in_c" />
@@ -14,7 +14,7 @@
     </Configuration>
   </Configurations>
   <Contents>
-    <File name="example_01-xtra_1.c" subtype="Code" buildaction="Compile" />
+    <File name="example_01-xtra_2.c" subtype="Code" buildaction="Compile" />
     <File name="_README_" subtype="Code" buildaction="Nothing" />
   </Contents>
   <compiler ctype="GccCompiler" />

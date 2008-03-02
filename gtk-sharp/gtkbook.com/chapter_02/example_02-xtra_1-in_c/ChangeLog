@@ -1,3 +1,7 @@
+2008-03-02  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
+	* main.c: Moved the label's selectable up to where the comment is
+
 2008-03-01  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
 
 	

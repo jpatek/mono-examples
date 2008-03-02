@@ -53,6 +53,8 @@ namespace example_01
 			win.BorderWidth = 10;
 			win.SetSizeRequest(400,100);
 			
+			
+			
 			/* Connect the main window to the destroy and delete-event signals. */
 			// when this window is deleted, it'll run delete_event()
 			win.DeleteEvent += delete_event;
@@ -63,12 +65,15 @@ namespace example_01
 			
 			// Have the label use colors!
 			label.Markup = "<span foreground=\"blue\" size=\"x-large\">Blue text</span> is <i>cool</i>!";
+			
+			// Disable the label
+			label.Sensitive = false;
 
 			/* Add the label as a child widget of the window. */
 			win.Add(label);
 			
 			// Show the window and the label
-			win.ShowAll();			
+			win.ShowAll();
 			
 			/* Hand control over to the main loop. */
 			Application.Run();

@@ -1,0 +1,9 @@
+//-----------------------------------------------------------------------------
+// README
+//-----------------------------------------------------------------------------
+//
+// This project changes the original example's window to be a different default
+// size (notice that it can still be shrunk to the requested size, 200px). This
+// example also moves the window from the upper corner.
+//
+//-----------------------------------------------------------------------------

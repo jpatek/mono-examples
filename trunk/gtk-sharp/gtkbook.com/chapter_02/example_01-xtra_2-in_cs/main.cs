@@ -40,7 +40,7 @@ namespace example_01_xtra_1
 					
 			/* Create a new window, give it a title and display it to the user. */
 			win = new Window(WindowType.Popup);
-			win.Title = "C02_E01-xtra_2 - in_cs - Hello World";
+			win.Title = "cs - Hello World";
 			win.Show();
 			
 			/* Hand control over to the main loop. */

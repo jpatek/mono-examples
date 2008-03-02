@@ -24,25 +24,49 @@
 //
 //--------------------------------------------------------------------------------
 
+
 using System;
 using Gtk;
 
-namespace example_01_xtra_1
+namespace example_01
 {	
-	public class example_01_xtra_1
+	public class example_01
 	{		
-		public static void Main(string[] args) 
+		
+		/* Stop the GTK+ main loop function. */
+		static void delete_event (object obj, EventArgs args)
+        {
+			Application.Quit ();
+        }
+		
+		public static void Main(string[] args)
 		{	
 			Window win;
+			Button btn;
 			
 			/* Initialize GTK+ and all of its supporting libraries. */
 			Application.Init();
-					
+			
 			/* Create a new window, give it a title and display it to the user. */
 			win = new Window(WindowType.Toplevel);
-			win.Title = "cs - Hello World";
-			win.Decorated = false;
-			win.Show();
+			win.Title = "cs - Buttons";
+			win.BorderWidth = 25;
+			win.SetSizeRequest(200,100);
+			
+			/* Connect the main window to the destroy and delete-event signals. */
+			// when this window is deleted, it'll run delete_event()
+			win.DeleteEvent += delete_event;
+			
+			/* Create a new button that has a mnemonic key of Alt+C. */
+			btn = new Button("_Close");
+			btn.Relief = ReliefStyle.None;
+			btn.Clicked += delete_event;
+			
+			/* Add the label as a child widget of the window. */
+			win.Add(btn);
+			
+			// Show the window and the label
+			win.ShowAll();			
 			
 			/* Hand control over to the main loop. */
 			Application.Run();

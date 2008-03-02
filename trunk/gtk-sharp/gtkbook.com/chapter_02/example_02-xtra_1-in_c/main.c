@@ -41,7 +41,7 @@ int main (int argc,
   gtk_init (&argc, &argv);
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  gtk_window_set_title (GTK_WINDOW (window), "C02_E02_x1 - in_c - Hello World!");
+  gtk_window_set_title (GTK_WINDOW (window), "c - Hello World!");
   gtk_container_set_border_width (GTK_CONTAINER (window), 10);
   gtk_widget_set_size_request (window, 400, 100);
 

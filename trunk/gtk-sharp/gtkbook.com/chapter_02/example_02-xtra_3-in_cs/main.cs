@@ -49,7 +49,7 @@ namespace example_01
 			
 			/* Create a new window, give it a title and display it to the user. */
 			win = new Window(WindowType.Toplevel);
-			win.Title = "C02_E02 - in_cs - Hello World";
+			win.Title = "cs - Hello World";
 			win.BorderWidth = 10;
 			win.SetSizeRequest(200,100);
 			

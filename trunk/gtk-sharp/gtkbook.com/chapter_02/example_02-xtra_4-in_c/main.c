@@ -41,9 +41,16 @@ int main (int argc,
   gtk_init (&argc, &argv);
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  gtk_window_set_title (GTK_WINDOW (window), "C02_E02_x1 - in_c - Hello World!");
+  gtk_window_set_title (GTK_WINDOW (window), "C02_E02 - in_c - Hello World!");
   gtk_container_set_border_width (GTK_CONTAINER (window), 10);
   gtk_widget_set_size_request (window, 400, 100);
+  
+  // Make the window not resizeable
+  gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
+  
+  // Set the window icon
+  gtk_window_set_icon_from_file (GTK_WINDOW (window), "/usr/share/icons/hicolor/48x48/apps/monodevelop.png", NULL);
+  
 
   /* Connect the main window to the destroy and delete-event signals. */
   g_signal_connect (G_OBJECT (window), "destroy",
@@ -52,14 +59,8 @@ int main (int argc,
                     G_CALLBACK (delete_event), NULL);
 
   /* Create a new GtkLabel widget that is selectable. */
-  label = gtk_label_new (NULL);
+  label = gtk_label_new ("Hello World");
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-  
-  // Have the label use colors!
-  gtk_label_set_markup(GTK_LABEL (label), "<span foreground=\"blue\" size=\"x-large\">Blue text</span> is <i>cool</i>!");
-  
-  // Disable the label
-  gtk_widget_set_sensitive (label, FALSE); 
 
   /* Add the label as a child widget of the window. */
   gtk_container_add (GTK_CONTAINER (window), label);

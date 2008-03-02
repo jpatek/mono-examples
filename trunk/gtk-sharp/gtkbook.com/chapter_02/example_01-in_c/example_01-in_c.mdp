@@ -14,7 +14,7 @@
     </Configuration>
   </Configurations>
   <Contents>
-    <File name="example_01.c" subtype="Code" buildaction="Compile" />
+    <File name="main.c" subtype="Code" buildaction="Compile" />
   </Contents>
   <compiler ctype="GccCompiler" />
   <Packages>

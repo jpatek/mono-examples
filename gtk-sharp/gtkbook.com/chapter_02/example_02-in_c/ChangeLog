@@ -2,6 +2,10 @@
 
 	
 
+2008-03-01  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
+	
+
 2008-02-28  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
 
 	* example_02.c: * Made the default window width 400 so that the window title

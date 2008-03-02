@@ -41,7 +41,7 @@ function clone_dir()
 	cd $DSTDIR
 
 	echo -n "Removing extraneous files from $DSTDIR dir... "
-	rm -rf -- .svn bin ChangeLog *.d *.o *.pidb && echo "Done." || exit 5
+	rm -rf -- .svn .prec bin ChangeLog *.d *.o *.pidb && echo "Done." || exit 5
 
 	echo -n "Fixing the $DSTDIR project file... "
 	cat $SRCDIR.mdp | sed -e "s/$SRCDIR/$DSTDIR/g" > $DSTDIR.mdp && echo "Done." || exit 5

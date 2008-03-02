@@ -41,15 +41,15 @@ int main (int argc,
   gtk_init (&argc, &argv);
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  gtk_window_set_title (GTK_WINDOW (window), "C02_E02 - in_c - Hello World!");
+  gtk_window_set_title (GTK_WINDOW (window), "c - Hello World!");
   gtk_container_set_border_width (GTK_CONTAINER (window), 10);
-  gtk_widget_set_size_request (window, 200, 100);
+  gtk_widget_set_size_request (GTK_WIDGET (window), 200, 100);
   
   // Set the default size of the window, notice the window can still be shrunk.
-  gtk_window_set_default_size (window, 400, 100);
+  gtk_window_set_default_size (GTK_WINDOW (window), 400, 100);
   
   // Move the window away from the upper left corner of the screen.
-  gtk_window_move(window, 200, 200);
+  gtk_window_move(GTK_WINDOW (window), 200, 200);
 
   /* Connect the main window to the destroy and delete-event signals. */
   g_signal_connect (G_OBJECT (window), "destroy",

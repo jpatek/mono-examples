@@ -49,7 +49,7 @@ int main (int argc,
 
   /* Create a new window, give it a title and display it to the user. */
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  gtk_window_set_title (GTK_WINDOW (window), "C02_E01-xtra_1 - in_c - Hello World");
+  gtk_window_set_title (GTK_WINDOW (window), "c - Hello World");
   gtk_widget_show (window);
 
   /* Hand control over to the main loop. */

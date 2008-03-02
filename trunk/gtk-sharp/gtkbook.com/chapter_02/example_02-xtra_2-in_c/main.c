@@ -56,7 +56,10 @@ int main (int argc,
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
   
   // Have the label use colors!
-  gtk_label_set_markup(GTK_LABEL (label), "<span foreground=\"blue\" size=\"x-large\">Blue text</span> is <i>cool</i>!"); 
+  gtk_label_set_markup(GTK_LABEL (label), "<span foreground=\"blue\" size=\"x-large\">Blue text</span> is <i>cool</i>!");
+  
+  // Disable the label
+  gtk_widget_set_sensitive (label, FALSE); 
 
   /* Add the label as a child widget of the window. */
   gtk_container_add (GTK_CONTAINER (window), label);

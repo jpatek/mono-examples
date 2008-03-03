@@ -35,17 +35,19 @@ namespace example_01
 		
 		/* Stop the GTK+ main loop function. */
 		static void DeleteEvent (object obj, DeleteEventArgs args)
-        {
+		{
 			Application.Quit ();
-        }
+		}
 		
 		// Swap the title and the label text
 		static void KeyPressEvent (object obj, KeyPressEventArgs args)
-        {
+		{
 			Window win = (Window)obj;
 			
 			if (win.Title == "Thomas")
 			{
+				// because of http://www.mail-archive.com/gtk-sharp-list@lists.ximian.com/msg01547.html
+				// I can't use g_object_set for gtk#
 				win.Title = "Wiest";
 				((Label)win.Child).Text = "Thomas";
 			}
@@ -54,7 +56,7 @@ namespace example_01
 				win.Title = "Thomas";
 				((Label)win.Child).Text = "Wiest";
 			}			
-        }
+		}
 		
 		static void TitleChanged(object widget, GLib.NotifyArgs events)
 		{

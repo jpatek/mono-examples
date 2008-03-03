@@ -25,6 +25,8 @@
       <Entry build="True" name="example_03-xtra_1-in_cs" configuration="Debug" />
       <Entry build="True" name="exercise_1-in_c" configuration="Debug" />
       <Entry build="True" name="exercise_1-in_cs" configuration="Debug" />
+      <Entry build="True" name="exercise_2-in_c" configuration="Debug" />
+      <Entry build="True" name="exercise_2-in_cs" configuration="Debug" />
     </Configuration>
     <Configuration name="Release" ctype="CombineConfiguration">
       <Entry build="True" name="example_01-in_c" configuration="Release" />
@@ -51,9 +53,11 @@
       <Entry build="True" name="example_03-xtra_1-in_cs" configuration="Release" />
       <Entry build="True" name="exercise_1-in_c" configuration="Release" />
       <Entry build="True" name="exercise_1-in_cs" configuration="Release" />
+      <Entry build="True" name="exercise_2-in_c" configuration="Release" />
+      <Entry build="True" name="exercise_2-in_cs" configuration="Release" />
     </Configuration>
   </Configurations>
-  <StartMode startupentry="exercise_1-in_c" single="True">
+  <StartMode startupentry="exercise_2-in_cs" single="True">
     <Execute type="None" entry="example_01-in_c" />
     <Execute type="None" entry="example_01-in_cs" />
     <Execute type="None" entry="example_01-xtra_1-in_c" />
@@ -78,6 +82,8 @@
     <Execute type="None" entry="example_03-xtra_1-in_cs" />
     <Execute type="None" entry="exercise_1-in_c" />
     <Execute type="None" entry="exercise_1-in_cs" />
+    <Execute type="None" entry="exercise_2-in_c" />
+    <Execute type="None" entry="exercise_2-in_cs" />
   </StartMode>
   <MonoDevelop.ChangeLogAddIn.ChangeLogInfo policy="OneChangeLogInProjectRootDirectory" />
   <Entries>
@@ -105,5 +111,7 @@
     <Entry filename="example_03-xtra_1-in_cs/example_03-xtra_1-in_cs.mdp" />
     <Entry filename="exercise_1-in_c/exercise_1-in_c.mdp" />
     <Entry filename="exercise_1-in_cs/exercise_1-in_cs.mdp" />
+    <Entry filename="exercise_2-in_c/exercise_2-in_c.mdp" />
+    <Entry filename="exercise_2-in_cs/exercise_2-in_cs.mdp" />
   </Entries>
 </Combine>

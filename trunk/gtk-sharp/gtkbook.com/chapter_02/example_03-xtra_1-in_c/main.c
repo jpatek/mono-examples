@@ -31,6 +31,9 @@
 #include <gtk/gtk.h>
 
 static void destroy (GtkWidget*, gpointer);
+static void relief_property_changed (GObject *widget,
+						 			 GParamSpec *property,
+									 gpointer data);
 
 int main (int argc, 
           char *argv[])
@@ -53,6 +56,10 @@ int main (int argc,
 
   /* Create a new button that has a mnemonic key of Alt+C. */
   button = gtk_button_new_with_mnemonic ("_Close");
+  
+  g_signal_connect (G_OBJECT (button), "notify::relief",
+                    G_CALLBACK (relief_property_changed), NULL);
+  
   gtk_button_set_relief (GTK_BUTTON (button), GTK_RELIEF_NONE);
   
   /* Connect the button to the clicked signal. The callback function recieves the
@@ -66,6 +73,15 @@ int main (int argc,
 
   gtk_main ();
   return 0;
+}
+
+// Print out that the btn.relief property changed
+static void
+relief_property_changed (GObject *widget,
+						 GParamSpec *property,
+						 gpointer data)
+{
+	g_message("The btn.relief property changed");
 }
 
 /* Stop the GTK+ main loop function. */

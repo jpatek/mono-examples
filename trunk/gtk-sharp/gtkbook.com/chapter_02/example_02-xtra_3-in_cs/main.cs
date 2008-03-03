@@ -34,7 +34,7 @@ namespace example_01
 	{		
 		
 		/* Stop the GTK+ main loop function. */
-		static void delete_event (object obj, DeleteEventArgs args)
+		static void DeleteEvent (object obj, DeleteEventArgs args)
         {
 			Application.Quit ();
         }
@@ -61,7 +61,7 @@ namespace example_01
 			
 			/* Connect the main window to the destroy and delete-event signals. */
 			// when this window is deleted, it'll run delete_event()
-			win.DeleteEvent += delete_event;
+			win.DeleteEvent += DeleteEvent;
 			
 			/* Create a new GtkLabel widget that is selectable. */
 			label = new Label("Hello World");

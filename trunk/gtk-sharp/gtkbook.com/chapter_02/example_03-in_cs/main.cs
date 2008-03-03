@@ -34,7 +34,7 @@ namespace example_01
 	{		
 		
 		/* Stop the GTK+ main loop function. */
-		static void delete_event (object obj, EventArgs args)
+		static void DeleteEvent (object obj, EventArgs args)
         {
 			Application.Quit ();
         }
@@ -55,12 +55,12 @@ namespace example_01
 			
 			/* Connect the main window to the destroy and delete-event signals. */
 			// when this window is deleted, it'll run delete_event()
-			win.DeleteEvent += delete_event;
+			win.DeleteEvent += DeleteEvent;
 			
 			/* Create a new button that has a mnemonic key of Alt+C. */
 			btn = new Button("_Close");
 			btn.Relief = ReliefStyle.None;
-			btn.Clicked += delete_event;
+			btn.Clicked += DeleteEvent;
 			
 			/* Add the label as a child widget of the window. */
 			win.Add(btn);

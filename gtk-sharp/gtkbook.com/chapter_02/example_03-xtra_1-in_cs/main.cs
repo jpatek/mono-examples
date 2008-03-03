@@ -34,10 +34,15 @@ namespace example_01
 	{		
 		
 		/* Stop the GTK+ main loop function. */
-		static void delete_event (object obj, EventArgs args)
+		static void DeleteEvent (object obj, EventArgs args)
         {
 			Application.Quit ();
         }
+		
+		static void ReliefPropertyChanged(object widget, GLib.NotifyArgs events)
+		{
+			Console.WriteLine("The btn.relief property changed");
+		}
 		
 		public static void Main(string[] args)
 		{	
@@ -52,19 +57,24 @@ namespace example_01
 			
 			// Store data in the window, then use that data as the title
 			win.Data["title"] = "cs - Buttons"; 
-			win.Title = (string)win.Data["title"];			
+			win.Title = (string)win.Data["title"];	
 			
 			win.BorderWidth = 25;
 			win.SetSizeRequest(200,100);
 			
 			/* Connect the main window to the destroy and delete-event signals. */
 			// when this window is deleted, it'll run delete_event()
-			win.DeleteEvent += delete_event;
+			win.DeleteEvent += DeleteEvent;
 			
 			/* Create a new button that has a mnemonic key of Alt+C. */
 			btn = new Button("_Close");
+			
+			// Get notified whenever the button's relief property is changed
+			btn.AddNotification("relief", ReliefPropertyChanged);			
+			
+			// Set the relief and hook up the click event
 			btn.Relief = ReliefStyle.None;
-			btn.Clicked += delete_event;
+			btn.Clicked += DeleteEvent;
 			
 			/* Add the label as a child widget of the window. */
 			win.Add(btn);

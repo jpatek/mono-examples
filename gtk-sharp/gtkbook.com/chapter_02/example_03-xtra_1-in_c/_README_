@@ -3,6 +3,7 @@
 //-----------------------------------------------------------------------------
 //
 // This project changes the original example to first store a string in the 
-// window's internal data, then retrieve it and use it to set the window title
+// window's internal data, then retrieve it and use it to set the window title.
+// It also prints a message whenever the btn.relief property is modified.
 //
 //-----------------------------------------------------------------------------

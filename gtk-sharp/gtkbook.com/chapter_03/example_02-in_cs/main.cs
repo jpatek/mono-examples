@@ -73,7 +73,7 @@ namespace example_01
 			{
 				Button btn = new Button();
 				btn.Label = curName;
-				vbox.PackEnd(btn);
+				vbox.PackEnd(btn, false, false, 5);
 				
 				btn.Clicked += OnBtnClicked;
 			}

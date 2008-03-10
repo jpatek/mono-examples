@@ -1,3 +1,10 @@
+2008-03-10  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
+	* main.c: Added License to the main.c files
+	
+	  Changed the main.cs files to use the button constructor to set the
+	  label.
+
 2008-03-09  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
 
 	* example_02-in_c.mdp, main.c: Added chapter 3, example 2

@@ -57,7 +57,7 @@
       <Entry build="True" name="exercise_2-in_cs" configuration="Release" />
     </Configuration>
   </Configurations>
-  <StartMode startupentry="exercise_2-in_cs" single="True">
+  <StartMode startupentry="example_01-in_c" single="True">
     <Execute type="None" entry="example_01-in_c" />
     <Execute type="None" entry="example_01-in_cs" />
     <Execute type="None" entry="example_01-xtra_1-in_c" />

@@ -33,6 +33,7 @@ function check_dirs()
 function clone_dir()
 {
 	SRCDIR=$1
+	SRCDIRNAME=$(basename $SRCDIR)
 	DSTDIR=$2
 
 	echo -n "Copying $SRCDIR to $DSTDIR... "
@@ -44,10 +45,8 @@ function clone_dir()
 	rm -rf -- .svn .prec bin ChangeLog *.d *.o *.pidb && echo "Done." || exit 5
 
 	echo -n "Fixing the $DSTDIR project file... "
-	cat $SRCDIR.mdp | sed -e "s/$SRCDIR/$DSTDIR/g" > $DSTDIR.mdp && echo "Done." || exit 5
-	rm -- $SRCDIR.mdp
-	#mv -- $SRCDIR.mdp $DSTDIR.mdp && echo "Done." || exit 5
-
+	cat $SRCDIRNAME.mdp | sed -e "s/$SRCDIRNAME/$DSTDIR/g" > $DSTDIR.mdp && echo "Done." || exit 5
+	rm -- $SRCDIRNAME.mdp
 
 	cd ..
 }

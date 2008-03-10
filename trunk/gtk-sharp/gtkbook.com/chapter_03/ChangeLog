@@ -1,3 +1,9 @@
+2008-03-10  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
+	* example_02-xtra_1-in_cs, chapter_03.mds, example_02-xtra_1-in_c: Added an
+	  xtra example to 3-2 that uses ReorderChild to set the vbox up
+	  differently.
+
 2008-03-09  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
 
 	* example_02-in_c, example_02-in_cs, chapter_03.mds: Added chapter 3,

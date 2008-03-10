@@ -1,0 +1,5 @@
+2008-03-10  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
+	* main.c, _README_, example_02-xtra_1-in_c.mdp: Added an xtra example to 3-2
+	  that uses ReorderChild to set the vbox up differently.
+

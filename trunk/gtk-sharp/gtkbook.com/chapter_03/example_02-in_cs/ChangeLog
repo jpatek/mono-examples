@@ -1,4 +1,9 @@
 2008-03-09  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
 
+	* main.cs: Corrected the CS version of 3-2 to match the C version of
+	  PackEnd.
+
+2008-03-09  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
 	* example_02-in_cs.mdp, main.cs: Added chapter 3, example 2
 

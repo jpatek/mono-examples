@@ -37,7 +37,7 @@ namespace example_01
 			Window win;
 			
 			/* Initialize GTK+ and all of its supporting libraries. */
-			Application.Init();
+			Application.Init("main", ref args);
 			
 			/* Create a new window, give it a title and display it to the user. */
 			win = new Window(WindowType.Toplevel);

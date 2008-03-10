@@ -71,8 +71,7 @@ namespace example_01
 			
 			foreach (string curName in names)
 			{
-				Button btn = new Button();
-				btn.Label = curName;
+				Button btn = new Button(curName);
 				vbox.PackEnd(btn, false, false, 5);
 				
 				btn.Clicked += OnBtnClicked;

@@ -34,55 +34,47 @@ namespace example_01
 	{		
 		
 		/* Stop the GTK+ main loop function. */
-		static void OnDeleteEvent (object obj, DeleteEventArgs args)
+		static void OnDeleteEvent (object obj, EventArgs args)
         {
 			Application.Quit ();
         }
-		
-		static void OnBtnClicked (object btn, EventArgs args)
-		{
-			if (btn is Button)
-			{
-				((Button)btn).Destroy();
-			}
-		}
-		
+
 		public static void Main(string[] args)
 		{	
-			string[] names = { "Andrew", "Joe", "Samantha", "Jonathan" };
 			Window win;
-			VBox vbox;
-			Button btn = null;
+			HPaned hPane;
+			Button btn1, btn2;
 			
 			/* Initialize GTK+ and all of its supporting libraries. */
 			Application.Init("main", ref args);
 			
 			/* Create a new window, give it a title and display it to the user. */
 			win = new Window(WindowType.Toplevel);
-			win.Title = "cs - Boxes #2";
+			win.Title = "cs - Panes";
 			win.BorderWidth = 10;
-			win.SetSizeRequest(150, -1);
+			win.SetSizeRequest(225, 150);
 			
 			/* Connect the main window to the destroy and delete-event signals. */
 			// when this window is deleted, it'll run delete_event()
 			win.DeleteEvent += OnDeleteEvent;
 			
-			// Create the vbox
-			vbox = new VBox(true, 5);
-
-			foreach (string curName in names)
-			{
-				btn = new Button(curName);
-				vbox.PackEnd(btn, false, false, 5);
-				
-				btn.Clicked += OnBtnClicked;
-			}
+			// Create the hpane
+			hPane = new HPaned();
 			
-			// Move the last button in the list to the bottom of the window
-			vbox.ReorderChild(btn, 0);
+			// Create the buttons
+			btn1 = new Button("Resize");
+			btn2 = new Button("Me!");
+			
+			// Hook up the buttons to exit
+			btn1.Clicked += OnDeleteEvent;
+			btn2.Clicked += OnDeleteEvent;
+			
+			// Add the buttons to the pane
+			hPane.Add1(btn1);
+			hPane.Add2(btn2);
 			
 			// Add the vbox to the window
-			win.Add(vbox);
+			win.Add(hPane);
 			
 			// Show the window and the label
 			win.ShowAll();			

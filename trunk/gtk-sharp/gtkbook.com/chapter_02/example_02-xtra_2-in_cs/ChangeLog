@@ -1,3 +1,8 @@
+2008-03-09  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
+
+	* main.cs: changed the Init to also pass in the args (as per the C
+	  examples): Application.Init("main", ref args);
+
 2008-03-02  Thomas Wiest <tw-mono_examples_project@wiestfamily.org> 
 
 	* main.cs: Changed delete_event to DeleteEvent to be more inline with the

@@ -1,0 +1,23 @@
+<Project name="example_02-in_c" fileversion="2.0" language="C" ctype="CProject">
+  <Configurations active="Debug">
+    <Configuration name="Debug" SourceDirectory="." ctype="CProjectConfiguration">
+      <Output directory="bin/Debug" output="example_02-in_c" />
+      <Build debugmode="True" target="Bin" />
+      <Execution runwithwarnings="True" consolepause="True" />
+      <CodeGeneration WarningLevel="Normal" WarningsAsErrors="False" OptimizationLevel="0" ExtraCompilerArguments="" ExtraLinkerArguments="" DefineSymbols="DEBUG MONODEVELOP" ctype="CCompilationParameters" />
+    </Configuration>
+    <Configuration name="Release" ctype="CProjectConfiguration">
+      <Output directory="bin/Release" output="example_02-in_c" />
+      <Build debugmode="False" target="Bin" />
+      <Execution runwithwarnings="True" consolepause="True" />
+      <CodeGeneration WarningLevel="Normal" WarningsAsErrors="False" OptimizationLevel="3" ExtraCompilerArguments="" ExtraLinkerArguments="" DefineSymbols="MONODEVELOP" ctype="CCompilationParameters" />
+    </Configuration>
+  </Configurations>
+  <Contents>
+    <File name="main.c" subtype="Code" buildaction="Compile" />
+  </Contents>
+  <compiler ctype="GccCompiler" />
+  <Packages>
+    <ProjectPackage file="gtk+-2.0" name="gtk+-2.0" IsProject="False" />
+  </Packages>
+</Project>
